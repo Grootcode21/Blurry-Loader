@@ -8,11 +8,11 @@ let int = setInterval(blurring, 30)
 function blurring() {
     load++
 
-    if (load >99) {
+    if (load > 99) {
         clearInterval(int)
     }
     loadText.innerText = '${load}%'
-    loadText.computedStyleMap.opacity = scale(load, 0, 100, 1, 0)
+    loadText.style.opacity = scale(load, 0, 100, 1, 0)
 }
 
 const scale = (num, in_min, out_min, out_max) => {
